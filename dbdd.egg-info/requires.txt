@@ -1,0 +1,12 @@
+numpy
+asyncio
+uwuify
+ascii_magic
+requests
+pathlib
+colorama
+datetime
+discord
+codecs
+typing
+logging

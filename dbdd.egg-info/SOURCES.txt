@@ -1,0 +1,9 @@
+LICENSE
+README.txt
+pyproject.toml
+setup.py
+dbdd.egg-info/PKG-INFO
+dbdd.egg-info/SOURCES.txt
+dbdd.egg-info/dependency_links.txt
+dbdd.egg-info/requires.txt
+dbdd.egg-info/top_level.txt
