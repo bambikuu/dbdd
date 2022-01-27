@@ -1,3 +1,20 @@
+Metadata-Version: 2.1
+Name: dbdd
+Version: 0.12
+Summary: DBD Desktop Python Wrapper
+Home-page: https://github.com/bambikuu/dbdd.py
+Author: BambiKu
+Author-email: bambikuuu@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/bambikuu/dbdd/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # dbdd.py
 
 *Good and Useful **Discord Wrapper***
@@ -93,6 +110,8 @@ See `contributing.md` for ways to get started.
 Please adhere to this project's `code of conduct`.
 
 
-## 🚀 About Author
+## đźš€ About Author
 I'm too lazy to write about me
 ok bye
+
+

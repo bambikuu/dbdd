@@ -1,11 +1,42 @@
+import discord
+import asyncio
+from discord.ext.commands import Bot
+from discord.ext import commands
+import platform
+import asyncio
+import requests
+import os
+import numpy
+from pathlib import Path
+import codecs
+from colorama import *
+import time
+import sys
+import datetime
+import ascii_magic
+import uwuify
+
+init(convert=True)
+
+if not os.path.exists('commands/'): 
+    os.makedirs('commands/')
+
+if not os.path.isfile('commands/example.py'):
+    f = open('commands/example.py', "w")
+    f.write('''
+@client.command()
+async def example(ctx):
+    await ctx.send("example text")
+''')
+
 number = 0
 
 def add_one(number):
     return number + 1
 
 width = os.get_terminal_size().columns
-
 scriptsList = []
+
 printSpaces = ""
 
 def getCurrentTime():
@@ -42,6 +73,27 @@ def RandomColor():
 def RandString():
     return "".join(random.choice(string.ascii_letters + string.digits) for i in range(random.randint(14, 32)))
 
+my_art = ascii_magic.from_image_file('icon.ico')
+ascii_magic.to_terminal(my_art)
+print(f"{Fore.BLUE}[{getCurrentTime()}] {Fore.WHITE}[INPUT] {Fore.GREEN}Please Input Token: \n".center(width))
+token = input("".center(width))
+hello = "Hello World"
+hello2 = "Goodbye World"
+prefix = "!"
+
+client = Bot(description="discord.gg/ggen", command_prefix=prefix)
+client.remove_command("help")
+
+@client.event
+async def on_ready():
+    os.system("cls")
+    ascii_magic.to_terminal(my_art)
+    print_info(f"{Fore.GREEN}L{Fore.BLUE}o{Fore.CYAN}g{Fore.BLUE}g{Fore.GREEN}{Fore.BLUE}d {Fore.CYAN}a{Fore.BLUE}s {Fore.GREEN}{client.user.name}".center(width))
+
+for filename in os.listdir('commands/'):
+        if filename.endswith('.py'):
+            include(f'commands/{filename}')
+
 @client.event
 async def on_command_error(ctx, error):
     error_str = str(error)
@@ -66,3 +118,22 @@ async def on_command_error(ctx, error):
     else:
         await ctx.send(f'[ERROR]: {error_str}', delete_after=3)
         print_error(f"{error_str}")
+
+@client.command()
+async def help(ctx):
+    await ctx.message.delete()
+    totalscripts = len(os.listdir('commands/'))
+    text = ""
+    for script in os.listdir('commands/'):
+        if script.endswith('.py'):
+            script = script.replace(".py", "")
+            text += f"{script}\n"
+
+    await ctx.send(f"""```ini
+[ Commands ]
+
+{text}
+
+# DBD Desktop```""")
+
+client.run(token)

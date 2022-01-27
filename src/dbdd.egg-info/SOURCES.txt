@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/dbdd/__init__.py
+src/dbdd/dbd.py
+src/dbdd/dbdd.py
+src/dbdd.egg-info/PKG-INFO
+src/dbdd.egg-info/SOURCES.txt
+src/dbdd.egg-info/dependency_links.txt
+src/dbdd.egg-info/requires.txt
+src/dbdd.egg-info/top_level.txt

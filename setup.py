@@ -6,7 +6,7 @@ setup(
     packages=find_packages(exclude=['tests*']),
     license='MIT',
     description='DBD Desktop Python Wrapper',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     install_requires=['numpy', 'asyncio', 'uwuify', 'ascii_magic', 'requests', 'pathlib', 'colorama', 'datetime', 'discord', 'codecs', 'typing', 'logging'],
     url='https://github.com/bambikuu/dbdd.py',
     author='BambiKu',
